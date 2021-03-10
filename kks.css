@@ -86,8 +86,8 @@ footer {
     content: "";
      top: 5px;
     left: 5px;
-    width: 20%;
-    height: 30%;
+    width: 20px;
+    height: 30px;
     background: #32D4E2;
     z-index: -1;
     transition: .25s ease;
