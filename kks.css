@@ -1,120 +1,159 @@
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 h2 {
-    color: white;
-    text-shadow: 2px 2px 4px #000000
+    background-image: linear-gradient(
+            to right,
+            #ede47d,
+            #6e612e 50%,
+            #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
 }
-h3>a {
-  color: #524f4e;
+
+h2::before {
+    content: '';
+    background: #6e612e;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+h2:hover {
+    background-position: 0;
+}
+
+h2:hover::before {
+    width: 100%;
+}
+
+h3 > a {
+    color: #524f4e;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 img {
-  border-radius: 50%;
-  margin-right: 20px;
-  ~webkit-transform: scale(1);
-  transform: scale(1);
-  ~webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+    border-radius: 50%;
+    margin-right: 20px;
+~ webkit-transform: scale(1);
+    transform: scale(1);
+~ webkit-transition: .3 s ease-in-out;
+    transition: .3s ease-in-out;
 }
-img:hover{
-  ~webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  opacity: 0.7;
+
+img:hover {
+~ webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 0.7;
 }
 
 .floating-button {
-  text-decoration: none;
-  display: inline-block;
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 45px;
-  margin: 10px 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #524f4e;
-  background: white;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
-  transition: .3s;
+    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
 }
+
 .floating-button:hover {
 
-  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  transform: translateY(-7px);
+    box-shadow: 0 15px 20px rgba(231, 166, 57, 0.4);
+    transform: translateY(-7px);
 }
 
 
 /* Style the header */
 header {
 
-  align-items: center;
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
-  font-size: 12px;
-  display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
 }
 
 
 section {
-  padding: 10px;
-  display: -webkit-flex;
-  display: flex;
-  background-color: #f1f1f1;
+    padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    background-color: #f1f1f1;
 
 }
 
 /* Style the navigation menu */
 nav {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background: #ccc;
-  padding: 20px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
 }
 
 /* Style the list inside the menu */
 nav ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 /* Style the content */
 article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  background-color: #f1f1f1;
-  padding: 10px;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
 }
-.buttons-list{
-  width: 40%;
+
+.buttons-list {
+    width: 40%;
 }
-.buttons-list__item{
- display: inline-table;
+
+.buttons-list__item {
+    display: inline-table;
 
 }
 
 /* Style the footer */
 footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
 }
