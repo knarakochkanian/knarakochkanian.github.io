@@ -1,18 +1,30 @@
-<style>
+
 * {
   box-sizing: border-box;
 }
-h1,h2 {
-  
-    color: white; 
+h2 {
+    color: white;
     text-shadow: 2px 2px 4px #000000
-  
 }
+h3>a {
+  color: #524f4e;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 img {
-  border-radius: 40%;
+  border-radius: 50%;
+  margin-right: 20px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+img:hover{
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  opacity: 0.7;
 }
 
 .floating-button {
@@ -35,26 +47,30 @@ img {
   transition: .3s;
 }
 .floating-button:hover {
-  background: #rgb(109, 104, 104);
+  background: #rgb(109, 104, 104;);
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-  color: white;
   transform: translateY(-7px);
 }
-  
+
 
 /* Style the header */
 header {
+
+  align-items: center;
   background-color: #f1f1f1;
   padding: 10px;
   text-align: center;
   font-size: 12px;
+  display: flex;
 }
 
 /* Container for flexboxes */
 section {
+  padding: 10px;
   display: -webkit-flex;
   display: flex;
   background-color: #f1f1f1;
+
 }
 
 /* Style the navigation menu */
@@ -80,13 +96,19 @@ article {
   background-color: #f1f1f1;
   padding: 10px;
 }
+.buttons-list{
+  width: 40%;
+}
+.buttons-list__item{
+ display: inline-table;
+
+}
 
 /* Style the footer */
 footer {
   background-color: #777;
   padding: 10px;
   text-align: center;
-  color: white;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
@@ -96,6 +118,3 @@ footer {
     flex-direction: column;
   }
 }
-
-
-</style>
